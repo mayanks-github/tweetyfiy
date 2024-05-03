@@ -1,9 +1,10 @@
 <div class="col-md-3 py-3">
-  <div class="card bg-light mb-3">
-    <div class="card-body">
-      <h5 class="card-title">Create Post</h5>
-      <textarea class="form-control" rows="3" placeholder="What is happening?"></textarea>
-      <button type="button" class="btn btn-primary mt-2">Post</button>
-    </div>
+  <div class="brand-image text-center mb-3">
+    <%= image_tag asset_path('tweetyfiy.jpeg'), alt: "Tweetyfiy Img", class: "rounded-circle", style: "width: 100px;" %>
+  </div>
+  <%= link_to "Logout", destroy_user_session_path, data: { "turbo-method": :delete }, class: "btn btn-primary text-left text-white w-100 my-1 position-relative" %>
+  <div class="d-flex align-items-center">
+    <img src="<%= asset_path('tweetyfiy.jpg') %>" alt="Profile Picture" class="rounded-circle me-2" style="width: 35px;">
+    <p><%= current_user.profile.user_name || current_user.email %></p>
   </div>
 </div>

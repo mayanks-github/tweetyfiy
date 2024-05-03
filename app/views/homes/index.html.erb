@@ -5,3 +5,13 @@
     <%= render "partials/right_most_container" %>
   </div>
 </div>
+
+<script>
+  tinymce.init({
+    selector: '.tinymce',
+    plugins: 'wordcount',
+    menubar: '',
+    height: 200,
+    content_css: 'tinymce-5'
+  });
+</script>
